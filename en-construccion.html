@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+ <title>En construccion</title>
+  <link rel="stylesheet" href="Estilo.css">
+</head>
+<body>
+    <header>
+        <h1>En Construcción</h1>
+    </header>
+    <section class="construction-message">
+        <p>Esta página está en construcción. Disculpa las molestias.</p>
+    </section>
+    <section class="ascii-art" id="ascii-art">
+        <p>···_________············________···········</p>
+        <p>··/         \··········/████████\··········</p>
+        <p>·/           \········/██      ██\·········</p>
+        <p>|     EN      |·······██  O  O  ██ ········</p>
+        <p>|CONSTRUCCION |······|   ______   |········</p>
+        <p>·\           /········\  \____/  /·········</p>
+        <p>··\_________/······    \________/··········</p>
+        <p>·······██················|╗  ╔|············</p>
+        <p>·······██·············__/█╚╗╔╝█\__·········</p>
+        <p>·······██···········_/    █║║█    \········</p>
+        <p>······_██··········/  _/  █║║█  \  \·······</p>
+        <p>·····|___|════════/  /·|  █║║█  |\  \······</p>
+        <p>·····|___|══════════/··|  █║║█  | \  \·····</p>
+    </section>
+    <section id="crt-menu" class="crt-menu" style="display:none;">
+      <ul>
+        <li><a href="Vista principal.html" id="menu-principal">Volver a la vista principal</a></li>
+      </ul>
+    </section>
+    <script src="main.js"></script>
+    <script src="menu-selector.js"></script>
+    <script>
+      // Animación tipo "boot" para el ASCII art
+      document.addEventListener('DOMContentLoaded', function() {
+        const asciiSection = document.getElementById('ascii-art');
+        const lines = Array.from(asciiSection.querySelectorAll('p'));
+        lines.forEach(line => line.style.visibility = 'hidden');
+        let i = 0;
+        function showLine() {
+          if (i < lines.length) {
+            lines[i].style.visibility = 'visible';
+            i++;
+            setTimeout(showLine, 80);
+          } else {
+            // Mostrar menú después de la animación
+            document.getElementById('crt-menu').style.display = 'block';
+          }
+        }
+        showLine();
+      });
+    </script>
+</body>
+</html>

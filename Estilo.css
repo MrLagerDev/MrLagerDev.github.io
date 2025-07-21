@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'SHPinscher-Regular';
+    src: url('SHPinscher-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #000000;
+    font-family: 'SHPinscher-Regular', Arial, sans-serif;
+    color: #5eff00;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+}
+header {
+    background-color:rgba(0, 0, 0, 0);
+    box-shadow: 0 0 10px #00ff007a, 0 0 10px #00ff007a, 0 0 10px #00ff007a, inset 0 0 10px #00ff007a, inset 0 0 10px #00ff007a;
+    border-radius: 25px 25px 40px 40px / 20px 20px 60px 60px;
+    border: 4px solid #ffffff;
+    border-style: dashed;
+    color: rgb(0, 255, 55);
+    padding: 10px 0;
+    font-family: 'SHPinscher-Regular', Arial, sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+body .ascii-art{
+    font-family: monospace;
+    white-space: pre;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    line-height: 0;
+    text-shadow: 0 0 16px #00ff00, 0 0 16px #00ff00, 0 0 32px #00ff00;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.164) 0px,
+        rgba(0, 255, 0, 0.164) 2px,
+        transparent 2px,
+        transparent 6px
+    );
+    z-index: 9999;
+}
+
+section.boot-sequence{
+    line-height: 0;
+   
+}
+
+/* Selector CRT para menú navegable */
+.crt-selector {
+  display: inline-block;
+  width: 3.5em;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+#crt-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#crt-menu li {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#crt-menu li.selected {
+  background: rgba(0,255,0,0.18);
+}
+
+#crt-menu li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-family: 'SHPinscher-Regular', monospace;
+  text-shadow: 0 0 8px #00ff00, 0 0 16px #00ff00;
+  pointer-events: none;
+  cursor: default;
+}
+
+#crt-menu-contacto ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#crt-menu-contacto ul, #crt-menu-contacto li {
+  font-family: 'SHPinscher-Regular', monospace;
+}
+
+#crt-menu-contacto li {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#crt-menu-contacto li.selected {
+  background: rgba(0,255,0,0.18);
+}
+
+#crt-menu-contacto li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-family: 'SHPinscher-Regular', monospace;
+  text-shadow: 0 0 8px #00ff00, 0 0 16px #00ff00;
+  pointer-events: none;
+  cursor: default;
+}
