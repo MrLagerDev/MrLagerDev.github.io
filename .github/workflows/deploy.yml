@@ -26,6 +26,7 @@ jobs:
 
       - name: Preparar contenido para deploy
         run: |
+          rm -rf public
           mkdir public
           cp -r * public
           touch public/.nojekyll
