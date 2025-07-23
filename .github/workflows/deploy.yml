@@ -28,7 +28,7 @@ jobs:
         run: |
           rm -rf public
           mkdir public
-          cp -r * public
+          rsync -av --exclude='public' ./ ./public/
           touch public/.nojekyll
 
       - name: Upload artifact
