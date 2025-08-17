@@ -119,3 +119,20 @@ section.boot-sequence{
   pointer-events: none;
   cursor: default;
 }
+.ascii-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+}
+
+#ascii-art-right {
+  letter-spacing: 5px;
+  line-height: 0;
+  font-size: 10px;
+}
