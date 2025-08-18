@@ -13,7 +13,7 @@ body{
     padding: 20px;
     font-size: 20px;
 }
-header {
+header {    
     background-color:rgba(0, 0, 0, 0);
     box-shadow: 0 0 10px #00ff007a, 0 0 10px #00ff007a, 0 0 10px #00ff007a, inset 0 0 10px #00ff007a, inset 0 0 10px #00ff007a;
     border-radius: 25px 25px 40px 40px / 20px 20px 60px 60px;
@@ -25,7 +25,7 @@ header {
     text-align: center;
     font-size: 30px;
 }
-body .ascii-art{
+body .ascii-art{    /* Estilo para el ASCII art */
     font-family: monospace;
     white-space: pre;
     justify-content: center;
@@ -35,7 +35,7 @@ body .ascii-art{
     text-shadow: 0 0 16px #00ff00, 0 0 16px #00ff00, 0 0 32px #00ff00;
 }
 
-body::after {
+body::after {   /* Efecto de fondo de pantalla */
     content: "";
     position: fixed;
     left: 0;
@@ -53,36 +53,36 @@ body::after {
     z-index: 9999;
 }
 
-section.boot-sequence{
+section.boot-sequence{    
     line-height: 0;
    
 }
 
 /* Selector CRT para menú navegable */
-.crt-selector {
+.crt-selector {   
   display: inline-block;
   width: 3.5em;
   font-weight: bold;
   margin-right: 8px;
 }
 
-#crt-menu ul {
+#crt-menu ul {    /* Estilo para el menú */
   list-style: none;
   padding-left: 0;
 }
 
-#crt-menu li {
+#crt-menu li {    /* Elementos del menú */
   margin-bottom: 8px;
   font-size: 1.2em;
   border-radius: 6px;
   transition: background 0.2s;
 }
 
-#crt-menu li.selected {
+#crt-menu li.selected {   /* Elemento seleccionado en el menú */
   background: rgba(0,255,0,0.18);
 }
 
-#crt-menu li a {
+#crt-menu li a {    /* Enlaces dentro del menú */
   color: #00ff00;
   text-decoration: none;
   font-family: 'SHPinscher-Regular', monospace;
@@ -91,27 +91,27 @@ section.boot-sequence{
   cursor: default;
 }
 
-#crt-menu-contacto ul {
+#crt-menu-contacto ul {   /* Estilo para el menú de contacto */
   list-style: none;
   padding-left: 0;
 }
 
-#crt-menu-contacto ul, #crt-menu-contacto li {
+#crt-menu-contacto ul, #crt-menu-contacto li {  /* Estilo para el menú de contacto */
   font-family: 'SHPinscher-Regular', monospace;
 }
 
-#crt-menu-contacto li {
+#crt-menu-contacto li {   /* Elementos del menú de contacto */
   margin-bottom: 8px;
   font-size: 1.2em;
   border-radius: 6px;
   transition: background 0.2s;
 }
 
-#crt-menu-contacto li.selected {
+#crt-menu-contacto li.selected {    /* Elemento seleccionado en el menú de contacto */
   background: rgba(0,255,0,0.18);
 }
 
-#crt-menu-contacto li a {
+#crt-menu-contacto li a { /* Enlaces dentro del menú de contacto */ 
   color: #00ff00;
   text-decoration: none;
   font-family: 'SHPinscher-Regular', monospace;
@@ -119,20 +119,42 @@ section.boot-sequence{
   pointer-events: none;
   cursor: default;
 }
-.ascii-container {
+.ascii-container {  /*Los Ascii que vayan dentro iran a la izquierda*/
   display: flex;
   gap: 2rem;
   justify-content: center;
   align-items: flex-start;
 }
 
-.ascii-art {
+.ascii-art {  /* Estilo para el ASCII art */
   font-family: monospace;
   white-space: pre;
 }
 
-#ascii-art-right {
+#ascii-art-right {   /* Estilo para el ASCII art de la derecha */
+  letter-spacing: 5px;
+  line-height: 0;
+  font-size: 5px;
+  /*color:#000000;*/   /*Descomentar para modo luz solo*/
+}
+
+#ascii-es {   /* Estilo para el ASCII art de España */
   letter-spacing: 5px;
   line-height: 0;
   font-size: 5px;
 }
+#ascii-en {   /* Estilo para el ASCII art de Inglaterra */
+  letter-spacing: 5px;
+  line-height: 0;
+  font-size: 5px;
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+.blink {
+  animation: blink 1s steps(2, start) infinite;
+}
+.ascii-art:focus {
+  outline: none;
+}
+

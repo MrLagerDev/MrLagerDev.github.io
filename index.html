@@ -18,12 +18,7 @@
       font-size: 2rem;
       text-align: center;
     }
-    .press-key {
-      margin-top: 40px;
-      font-size: 2.5rem;
-      text-shadow: 0 0 16px #00ff00, 0 0 32px #00ff00;
-      animation: blink 1s steps(2, start) infinite;
-    }
+    
     @keyframes blink {
       to { visibility: hidden; }
     }
@@ -32,15 +27,46 @@
 <body>
   <div>
     <h1>Bienvenido a mi portfolio</h1>
-    <div class="press-key">Pulsa cualquier tecla para iniciar</div>
-  </div>
-  <script>
-    document.addEventListener('keydown', () => {
-      window.location.href = 'Vista%20principal.html';
-    });
-    document.addEventListener('click', () => {
-      window.location.href = 'Vista%20principal.html';
-    });
-  </script>
+  <br><br>
+   <div class="ascii-container">
+      <section class="ascii-art" id="ascii-es" tabindex="0">
+        <p> ░░░░░░░░░░░░░░░░ </p> 
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ████████████████ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        <p> ░░░░░░░░░░░░░░░░ </p>
+        </section>
+        <section class="ascii-art" id="ascii-en" tabindex="0">
+          <p>▒█░░░░█▒▒█░░░░▒▒</p>
+          <p>▒▒█░░░█▒▒█░░░▒▒█</p>
+          <p>░▒▒█░░█▒▒█░░▒▒█░</p>
+          <p>░░▒▒█░█▒▒█░▒▒█░░</p>
+          <p>░░░▒▒██▒▒█▒▒█░░░</p>
+          <p>░░░░▒▒█▒▒█▒█░░░░</p>
+          <p>███████▒▒███████</p>
+          <p>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</p>
+          <p>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</p>
+          <p>███████▒▒███████</p>
+          <p>░░░░█▒█▒▒█▒▒░░░░</p>
+          <p>░░░█▒▒█▒▒██▒▒░░░</p>
+          <p>░░█▒▒░█▒▒█░█▒▒░░</p>
+          <p>░█▒▒░░█▒▒█░░█▒▒░</p>
+          <p>█▒▒░░░█▒▒█░░░█▒▒</p>
+          <p>▒▒░░░░█▒▒█░░░░█▒</p>
+        </section>
+   </div>
+
 </body>
+<script src="menu-selector.js"></script>
 </html>

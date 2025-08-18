@@ -48,3 +48,50 @@ window.addEventListener('DOMContentLoaded', () => {
 
   updateMenu();
 });
+
+const flags = [
+  document.getElementById('ascii-es'),
+  document.getElementById('ascii-en')
+];
+let selected = 0;
+
+function updateSelection() {
+  flags.forEach((flag, i) => {
+    if (i === selected) {
+      flag.classList.add('blink');
+      flag.focus();
+    } else {
+      flag.classList.remove('blink');
+    }
+  });
+}
+updateSelection();
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'd') {
+    selected = (selected + 1) % flags.length;
+    updateSelection();
+  } else if (e.key === 'ArrowLeft' || e.key === 'a') {
+    selected = (selected - 1 + flags.length) % flags.length;
+    updateSelection();
+  } else if (e.key === 'Enter' || e.key === ' ') {
+    if (selected === 0) {
+      window.location.href = 'Vista%20principal.html';
+    } else {
+      window.location.href = 'en-construccion.html';
+    }
+  }
+});
+
+// flags.forEach((flag, i) => {
+//   flag.addEventListener('click', () => {
+//     selected = i;
+//     updateSelection();
+//     if (selected === 0) {
+//       window.location.href = 'Vista%20principal.html';
+//     } else {
+//       window.location.href = 'en-construccion.html';
+//     }
+//   });
+// });
+
