@@ -192,3 +192,8 @@ section.boot-sequence{
   text-shadow: inherit;
 }
 
+#crt-menu.tree-menu .menu-item.menu-selectable a {
+  pointer-events: none;
+  cursor: none;
+}
+
