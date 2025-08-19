@@ -1,8 +1,7 @@
 // Menú CRT navegable con teclado y selector visual tipo terminal
 window.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('#crt-menu ul');
-  if (!menu) return;
-  let items = Array.from(menu.querySelectorAll('li'));
+  let items = Array.from(menu.querySelectorAll('.menu-selectable'));
   let selected = 0;
 
   // Elimina los estilos de lista para quitar el punto
@@ -11,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Inicializa el menú con el selector en la opción seleccionada
   function updateMenu() {
+    const isTree = menu.classList.contains('tree-menu');
     items.forEach((li, idx) => {
       let selector = li.querySelector('.crt-selector');
       if (!selector) {
@@ -22,8 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
         selector.style.marginRight = '8px';
         li.insertBefore(selector, li.firstChild);
       }
-      selector.innerHTML = idx === selected ? '<strong>C:\\></strong>' : '';
-      selector.style.color = idx === selected ? '#00ff00' : 'transparent';
+      // Solo muestra el cursor si NO es un menú tipo árbol
+      selector.innerHTML = (!isTree && idx === selected) ? '<strong>C:\\></strong>' : '';
+      selector.style.color = (!isTree && idx === selected) ? '#00ff00' : 'transparent';
       li.classList.toggle('selected', idx === selected);
     });
   }
